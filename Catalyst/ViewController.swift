@@ -44,7 +44,7 @@ class ViewController: UIViewController {
   let semaphore = DispatchSemaphore(value: ViewController.maxInflightBuffers)
   var currentDirection:String  = "rear" // for initial direction
 
-    
+  var currentFlashlightState:Bool = false
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -226,6 +226,8 @@ class ViewController: UIViewController {
     return currentFPSDelivered
   }
 
+//    MARK: Switch Camera Logic
+    
     @IBAction func buttonPressed(_ sender: Any) { // Whole logic of switching the front camera to rear camera. (very very sensitive.)
         
         if (currentDirection == "rear") {
@@ -260,6 +262,27 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "CreditsSegue", sender: self)
     }
     
+    @IBOutlet weak var flashlightButton: UIButton!
+    
+    @IBAction func flashlightPressed(_ sender: Any) {
+      
+        if (currentFlashlightState == false){
+            toggleTorch(on: true)
+            
+            print ("Flashlight is enabled.")
+            flashlightButton.setImage(UIImage(systemName: "flashlight.on.fill"), for: .normal)
+            currentFlashlightState = true
+            
+        } else {
+            
+            toggleTorch(on: false )
+            flashlightButton.setImage(UIImage(systemName:"flashlight.off.fill"), for: .normal)
+            currentFlashlightState = false
+            
+        }
+        
+        
+    }
     
 }
 
@@ -317,6 +340,33 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
     
     
 }
+//    MARK: Torch Toggle Function
+    
+    func toggleTorch(on: Bool) {
+        guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+        guard device.hasTorch else { print("Torch isn't available"); return }
+        
+        if device.hasTorch {
+                do {
+                    try device.lockForConfiguration()
+
+                    if on == true {
+                        device.torchMode = .on
+                    } else {
+                        device.torchMode = .off
+                    }
+
+                    device.unlockForConfiguration()
+                } catch {
+                    print("Torch could not be used")
+                }
+            } else {
+                print("Torch is not available")
+            }
+        
+        
+    }
 
 }
+
 
