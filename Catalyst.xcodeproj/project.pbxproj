@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		65777DCD24331006006B0FF4 /* FrontVideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65777DCC24331006006B0FF4 /* FrontVideoCapture.swift */; };
 		657A0FC02433F0A3004A2AA2 /* ViewControllerCredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A0FBF2433F0A3004A2AA2 /* ViewControllerCredits.swift */; };
+		659584A924387C6800D2DF4F /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659584A824387C6800D2DF4F /* SplashScreen.swift */; };
 		7B1CEB9721567C6500BB01C9 /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1CEB9621567C6500BB01C9 /* CVPixelBuffer+Helpers.swift */; };
 		7BF035A81EF053B400E537BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF035A71EF053B400E537BE /* AppDelegate.swift */; };
 		7BF035AA1EF053B400E537BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF035A91EF053B400E537BE /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		65777DCC24331006006B0FF4 /* FrontVideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontVideoCapture.swift; sourceTree = "<group>"; };
 		657A0FBF2433F0A3004A2AA2 /* ViewControllerCredits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCredits.swift; sourceTree = "<group>"; };
+		659584A824387C6800D2DF4F /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		7B1CEB9621567C6500BB01C9 /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
 		7BF035A41EF053B400E537BE /* Catalyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalyst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF035A71EF053B400E537BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				7BF035B91EF0540300E537BE /* VideoCapture.swift */,
 				7BF035A91EF053B400E537BE /* ViewController.swift */,
 				657A0FBF2433F0A3004A2AA2 /* ViewControllerCredits.swift */,
+				659584A824387C6800D2DF4F /* SplashScreen.swift */,
 			);
 			path = Catalyst;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659584A924387C6800D2DF4F /* SplashScreen.swift in Sources */,
 				7BF035BC1EF057F700E537BE /* VideoCapture.swift in Sources */,
 				657A0FC02433F0A3004A2AA2 /* ViewControllerCredits.swift in Sources */,
 				7B1CEB9721567C6500BB01C9 /* CVPixelBuffer+Helpers.swift in Sources */,

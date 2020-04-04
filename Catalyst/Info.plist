@@ -27,7 +27,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>This App requires camera access to understand objects around you.</string>
 	<key>UILaunchStoryboardName</key>
-	<string>Main</string>
+	<string>SplashScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
