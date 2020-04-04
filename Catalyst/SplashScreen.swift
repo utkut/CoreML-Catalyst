@@ -3,7 +3,7 @@
 //  Catalyst
 //
 //  Created by Utku Tarhan on 4/4/20.
-//  Copyright © 2020 MachineThink. All rights reserved.
+//  Copyright © 2020 Utku Tarhan. All rights reserved.
 //
 //
 //  The code was written for personal/educational purposes on San Francisco State University

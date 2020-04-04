@@ -226,7 +226,7 @@ class ViewController: UIViewController {
     return currentFPSDelivered
   }
 
-//    MARK: Switch Camera Logic
+//    MARK: Switch Camera Button
     
     @IBAction func buttonPressed(_ sender: Any) { // Whole logic of switching the front camera to rear camera. (very very sensitive.)
         
@@ -262,8 +262,9 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "CreditsSegue", sender: self)
     }
     
+//    MARK: Flashlight Button
+
     @IBOutlet weak var flashlightButton: UIButton!
-    
     @IBAction func flashlightPressed(_ sender: Any) {
       
         if (currentFlashlightState == false){
@@ -280,10 +281,7 @@ class ViewController: UIViewController {
             currentFlashlightState = false
             
         }
-        
-        
     }
-    
 }
 
 
