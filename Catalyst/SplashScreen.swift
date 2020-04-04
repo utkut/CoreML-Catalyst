@@ -5,7 +5,10 @@
 //  Created by Utku Tarhan on 4/4/20.
 //  Copyright © 2020 MachineThink. All rights reserved.
 //
-
+//
+//  The code was written for personal/educational purposes on San Francisco State University
+//  Does not infringe any conflict of interest with Apple Business Conduct 2020.
+//
 import Foundation
 import UIKit
 
@@ -37,12 +40,10 @@ super.didReceiveMemoryWarning()
         
        
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { // Wait for 1 second
             
-           let storyboard: UIStoryboard = UIStoryboard(name: "Main" , bundle: nil)
-            
+           let storyboard: UIStoryboard = UIStoryboard(name: "Main" , bundle: nil) // Full Screen Segue 
            let controller = storyboard.instantiateViewController(identifier: "Main")
-            
            controller.modalPresentationStyle = .fullScreen
             
            self.present(controller, animated: true, completion: nil)

@@ -43,14 +43,27 @@
                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wH2-H6-gu2"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQe-ZW-dv6">
+                                        <rect key="frame" x="289" y="3" width="24" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="3Q1-L0-Pxf"/>
+                                            <constraint firstAttribute="width" constant="24" id="X11-YV-rX7"/>
+                                        </constraints>
+                                        <state key="normal" image="flashlight.off.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="flashlightPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAJ-pd-IuE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="41E-pz-fN2" firstAttribute="top" secondItem="Sk0-xb-6cc" secondAttribute="top" constant="3" id="DVA-jS-LCM"/>
+                                    <constraint firstItem="FQe-ZW-dv6" firstAttribute="top" secondItem="41E-pz-fN2" secondAttribute="top" id="L0L-jL-FR8"/>
                                     <constraint firstItem="5yE-aY-hrf" firstAttribute="leading" secondItem="Sk0-xb-6cc" secondAttribute="leading" constant="14" id="M2B-Kb-PkF"/>
                                     <constraint firstItem="41E-pz-fN2" firstAttribute="baseline" secondItem="5yE-aY-hrf" secondAttribute="firstBaseline" id="Z2J-EM-V5l"/>
                                     <constraint firstItem="5yE-aY-hrf" firstAttribute="baseline" secondItem="41E-pz-fN2" secondAttribute="firstBaseline" id="cUO-IW-dov"/>
                                     <constraint firstItem="5yE-aY-hrf" firstAttribute="top" secondItem="Sk0-xb-6cc" secondAttribute="top" id="gH4-WZ-BuT"/>
+                                    <constraint firstItem="41E-pz-fN2" firstAttribute="leading" secondItem="FQe-ZW-dv6" secondAttribute="trailing" constant="30" id="jeJ-w5-64f"/>
                                     <constraint firstItem="41E-pz-fN2" firstAttribute="trailing" secondItem="Sk0-xb-6cc" secondAttribute="trailingMargin" id="yWM-2m-GZr"/>
                                 </constraints>
                             </view>
@@ -94,6 +107,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="flashlightButton" destination="FQe-ZW-dv6" id="Yh3-HJ-0E7"/>
                         <outlet property="predictionLabel" destination="gRf-OZ-rXK" id="06w-Bv-AsP"/>
                         <outlet property="timeLabel" destination="Bs6-Jp-lWQ" id="vJU-QR-vQ6"/>
                         <outlet property="videoPreview" destination="Sk0-xb-6cc" id="EvY-Wg-geU"/>
@@ -222,5 +236,6 @@
     </scenes>
     <resources>
         <image name="camera.rotate.fill" catalog="system" width="128" height="96"/>
+        <image name="flashlight.off.fill" catalog="system" width="73" height="128"/>
     </resources>
 </document>

@@ -346,6 +346,8 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
         guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
         guard device.hasTorch else { print("Torch isn't available"); return }
         
+        //If the device doesnt have torch, it will not crash and it will print ^.
+        
         if device.hasTorch {
                 do {
                     try device.lockForConfiguration()
