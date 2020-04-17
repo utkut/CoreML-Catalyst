@@ -1,7 +1,7 @@
 # CoreML-Catalyst
 An iOS App that recognizes objects and returns the prediction using Machine Learning. 
 
-
+Referenced Inception V3 Model. 
 
 V1.0.3 Changelog
 
