@@ -1,6 +1,8 @@
 # CoreML-Catalyst
 An iOS App that recognizes objects and returns the prediction using Machine Learning. 
 
+[![CodeFactor](https://www.codefactor.io/repository/github/utkut/coreml-catalyst/badge/master?s=32bd13678cbb8e29cb92a1c408c474b2a73c5242)](https://www.codefactor.io/repository/github/utkut/coreml-catalyst/overview/master)
+
 Referenced Inception V3 Model. 
 
 V1.0.3 Changelog
