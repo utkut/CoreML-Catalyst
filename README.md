@@ -3,6 +3,13 @@ An iOS App that recognizes objects and returns the prediction using Machine Lear
 
 v1.0.1
 
+V1.0.3 Changelog
+
++ Added Support for Dark Mode for devices running above iOS 13.
++ Optimized ViewControllers for better UI design.
+* Optimized Commentary for better understanding what is edited.
+* Added Version Tags to swift files.
+
 V1.0.1 Changelog
 
 + Added Flashlight button to increase night use.
