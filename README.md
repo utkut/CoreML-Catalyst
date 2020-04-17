@@ -10,6 +10,12 @@ V1.0.3 Changelog
 * Optimized Commentary for better understanding what is edited.
 * Added Version Tags to swift files.
 
+v1.0.2 Changelog
++ Added Splash Screen for App Initial Launch
++ Optimized Strings for future Localization. 
+
+
+
 V1.0.1 Changelog
 
 + Added Flashlight button to increase night use.
