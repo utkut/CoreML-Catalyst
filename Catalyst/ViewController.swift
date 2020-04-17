@@ -227,7 +227,7 @@ class ViewController: UIViewController {
     return currentFPSDelivered
   }
 
-//    MARK: Switch Camera Button
+//    MARK: - Switch Camera Button
     
     @IBAction func buttonPressed(_ sender: Any) { // Whole logic of switching the front camera to rear camera. (very very sensitive.)
         
@@ -263,7 +263,7 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "CreditsSegue", sender: self)
     }
     
-//    MARK: Flashlight Button
+//    MARK: - Flashlight Button
 //    Flashlight button with on/off conversion with a simple if-else statement.
     
     @IBOutlet weak var flashlightButton: UIButton!
@@ -340,7 +340,7 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
     
     
 }
-//    MARK: Torch Toggle Function
+//    MARK: -Torch Toggle Function
     
     func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }

@@ -21,8 +21,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sk0-xb-6cc" userLabel="Video Preview">
                                 <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yE-aY-hrf">
-                                        <rect key="frame" x="14" y="0.0" width="142" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yE-aY-hrf">
+                                        <rect key="frame" x="14" y="8" width="142" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Trr-X5-wcb"/>
                                         </constraints>
@@ -33,8 +33,8 @@
                                             <action selector="labelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MCM-qt-DhC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41E-pz-fN2">
-                                        <rect key="frame" x="343" y="3" width="24" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41E-pz-fN2">
+                                        <rect key="frame" x="343" y="11" width="24" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="Hys-BA-iyo"/>
                                         </constraints>
@@ -43,8 +43,8 @@
                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wH2-H6-gu2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQe-ZW-dv6">
-                                        <rect key="frame" x="289" y="3" width="24" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQe-ZW-dv6">
+                                        <rect key="frame" x="289" y="11" width="24" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="3Q1-L0-Pxf"/>
                                             <constraint firstAttribute="width" constant="24" id="X11-YV-rX7"/>
@@ -56,12 +56,12 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="41E-pz-fN2" firstAttribute="top" secondItem="Sk0-xb-6cc" secondAttribute="top" constant="3" id="DVA-jS-LCM"/>
+                                    <constraint firstItem="41E-pz-fN2" firstAttribute="top" secondItem="Sk0-xb-6cc" secondAttribute="top" constant="11" id="DVA-jS-LCM"/>
                                     <constraint firstItem="FQe-ZW-dv6" firstAttribute="top" secondItem="41E-pz-fN2" secondAttribute="top" id="L0L-jL-FR8"/>
                                     <constraint firstItem="5yE-aY-hrf" firstAttribute="leading" secondItem="Sk0-xb-6cc" secondAttribute="leading" constant="14" id="M2B-Kb-PkF"/>
                                     <constraint firstItem="41E-pz-fN2" firstAttribute="baseline" secondItem="5yE-aY-hrf" secondAttribute="firstBaseline" id="Z2J-EM-V5l"/>
                                     <constraint firstItem="5yE-aY-hrf" firstAttribute="baseline" secondItem="41E-pz-fN2" secondAttribute="firstBaseline" id="cUO-IW-dov"/>
-                                    <constraint firstItem="5yE-aY-hrf" firstAttribute="top" secondItem="Sk0-xb-6cc" secondAttribute="top" id="gH4-WZ-BuT"/>
+                                    <constraint firstItem="5yE-aY-hrf" firstAttribute="top" secondItem="Sk0-xb-6cc" secondAttribute="top" constant="8" id="gH4-WZ-BuT"/>
                                     <constraint firstItem="41E-pz-fN2" firstAttribute="leading" secondItem="FQe-ZW-dv6" secondAttribute="trailing" constant="30" id="jeJ-w5-64f"/>
                                     <constraint firstItem="41E-pz-fN2" firstAttribute="trailing" secondItem="Sk0-xb-6cc" secondAttribute="trailingMargin" id="yWM-2m-GZr"/>
                                 </constraints>
