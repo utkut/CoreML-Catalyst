@@ -340,7 +340,7 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
     
     
 }
-//    MARK: -Torch Toggle Function
+//    MARK: - Torch Toggle Function
     
     func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
