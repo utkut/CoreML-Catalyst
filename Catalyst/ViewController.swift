@@ -8,7 +8,7 @@
 //  The code was written for personal/educational purposes on San Francisco State University
 //  Does not infringe any conflict of interest with Apple Business Conduct 2020.
 //
-
+// Version 1.0.3
 
 import UIKit
 import Vision
@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     setUpCamera()
     
     frameCapturingStartTime = CACurrentMediaTime()
+    
   }
 
   override func didReceiveMemoryWarning() {
@@ -263,14 +264,15 @@ class ViewController: UIViewController {
     }
     
 //    MARK: Flashlight Button
-
+//    Flashlight button with on/off conversion with a simple if-else statement.
+    
     @IBOutlet weak var flashlightButton: UIButton!
     @IBAction func flashlightPressed(_ sender: Any) {
       
         if (currentFlashlightState == false){
             toggleTorch(on: true)
             
-            print ("Flashlight is enabled.")
+            print ("Flashlight is enabled, Light 'em up.")
             flashlightButton.setImage(UIImage(systemName: "flashlight.on.fill"), for: .normal)
             currentFlashlightState = true
             
@@ -344,7 +346,7 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
         guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
         guard device.hasTorch else { print("Torch isn't available"); return }
         
-        //If the device doesnt have torch, it will not crash and it will print ^.
+        //If the device doesnt have torch, it will not crash and it will print the error ^.
         
         if device.hasTorch {
                 do {
@@ -364,9 +366,11 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
                 print("Torch is not available")
             }
         
-        
     }
 
+    
+    
+    
 }
 
 

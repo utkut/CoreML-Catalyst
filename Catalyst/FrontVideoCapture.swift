@@ -8,7 +8,7 @@
 //  The code was written for personal/educational purposes on San Francisco State University
 //  Does not infringe any conflict of interest with Apple Business Conduct 2020.
 //
-
+// Version 1.0.3
 
 import UIKit
 import AVFoundation
@@ -47,7 +47,7 @@ public class FrontVideoCapture: NSObject {
     for: .video,
     position: .front)
         else {
-            print("no front camera. but don't all iOS 10 devices have them?")
+            print("No front camera found. The device might be experiencing camera issues.")
             return false
     }
         
