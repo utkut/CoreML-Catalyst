@@ -20,10 +20,11 @@ super.viewDidLoad()
     print("Loading viewControllerCredits")
 }
     
-//override func didRecieveMemoryWarning() {
-//super.didReceiveMemoryWarning()
-//    }
-//
+override func didReceiveMemoryWarning() {
+super.didReceiveMemoryWarning()
+    print("Memory Warning.")
+    }
+
     
     @IBAction func visitWebsiteClicked(_ sender: Any) {
         print("button clicked")

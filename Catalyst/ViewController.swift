@@ -36,13 +36,11 @@ class ViewController: UIViewController {
   var frontVideoCapture: FrontVideoCapture!
   var requests = [VNCoreMLRequest]()
   var startTimes: [CFTimeInterval] = []
-
   var framesDone = 0
   var frameCapturingStartTime = CACurrentMediaTime()
-
   var inflightBuffer = 0
   let semaphore = DispatchSemaphore(value: ViewController.maxInflightBuffers)
-  var currentDirection:String  = "rear" // for initial direction
+  var currentDirection:String  = "rear" // for initial camera direction
 
   var currentFlashlightState:Bool = false
   override func viewDidLoad() {
@@ -102,7 +100,7 @@ class ViewController: UIViewController {
     
     frontVideoCapture = FrontVideoCapture()
     frontVideoCapture.delegate = self
-    frontVideoCapture.desiredFrameRate = 240
+    frontVideoCapture.desiredFrameRate = 30
     frontVideoCapture.setUp(sessionPreset: AVCaptureSession.Preset.hd1280x720) { success in
             if success {
                 if let frontPreviewLayer = self.frontVideoCapture.previewLayer {
@@ -347,7 +345,7 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
     
     func toggleTorch(on: Bool) {
         guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
-        guard device.hasTorch else { print("Torch isn't available"); return }
+        guard device.hasTorch else { print("Torch is not available"); return }
         
         //If the device doesnt have torch, it will not crash and it will print the error ^.
         
@@ -370,8 +368,9 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
             }
         
     }
-
     
+//  Simple Function to disable flash when the front camera is enabled.
+//  Turning on the flash when front camera enabled is not needed, and it crushes the app.
     func grayOutFlash() {
         if (currentDirection == "front"){
                           flashlightButton.setTitleColor(UIColor.gray, for: .disabled)
