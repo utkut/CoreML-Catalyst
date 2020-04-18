@@ -242,7 +242,7 @@ class ViewController: UIViewController {
             frameCapturingStartTime = CACurrentMediaTime()
             print("B")
             currentDirection = "front"
-            
+            grayOutFlash()
         } else {
             setUpVision()
             setUpCamera()
@@ -253,6 +253,7 @@ class ViewController: UIViewController {
             videoCapture.start()
             print("E")
             currentDirection = "rear"
+            grayOutFlash()
         }
         
         }
@@ -268,6 +269,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var flashlightButton: UIButton!
     @IBAction func flashlightPressed(_ sender: Any) {
+        
+        
       
         if (currentFlashlightState == false){
             toggleTorch(on: true)
@@ -368,6 +371,20 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
         
     }
 
+    
+    func grayOutFlash() {
+        if (currentDirection == "front"){
+                          flashlightButton.setTitleColor(UIColor.gray, for: .disabled)
+                          flashlightButton.isEnabled = false
+        }
+        else {
+            flashlightButton.isEnabled = true
+            flashlightButton.setTitleColor(UIColor.systemBlue, for: .normal)
+            
+        }
+        
+        
+                      }
     
     
     
