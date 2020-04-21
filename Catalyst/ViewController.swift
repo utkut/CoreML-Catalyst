@@ -373,8 +373,9 @@ public func top(_ k: Int, _ prob: [String: Double]) -> [(String, Double)] {
 //  Turning on the flash when front camera enabled is not needed, and it crushes the app.
     func grayOutFlash() {
         if (currentDirection == "front"){
-                          flashlightButton.setTitleColor(UIColor.gray, for: .disabled)
-                          flashlightButton.isEnabled = false
+            flashlightButton.setImage(UIImage(systemName:"flashlight.off.fill"), for: .normal)
+            flashlightButton.setTitleColor(UIColor.systemGray, for: .disabled)
+            flashlightButton.isEnabled = false
         }
         else {
             flashlightButton.isEnabled = true
